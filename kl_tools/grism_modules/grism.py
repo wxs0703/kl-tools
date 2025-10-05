@@ -36,19 +36,19 @@ import kl_tools.utils as utils
 import kl_tools.parameters as parameters
 #from cube import CubePars
 import kl_tools.emission as emission
-import kltools_grism_module_2 as m
+#import kltools_grism_module_2 as m
 from kl_tools.datavector import DataVector
 
-try:
-    import mpi4py
-    from mpi4py import MPI
-    comm = MPI.COMM_WORLD
-    size = comm.Get_size()
-    rank = comm.Get_rank()
-except:
-    rank = 0
-    size = 1
-m.set_mpi_info(size, rank)
+# try:
+#     import mpi4py
+#     from mpi4py import MPI
+#     comm = MPI.COMM_WORLD
+#     size = comm.Get_size()
+#     rank = comm.Get_rank()
+# except:
+#     rank = 0
+#     size = 1
+#m.set_mpi_info(size, rank)
 
 import ipdb
 

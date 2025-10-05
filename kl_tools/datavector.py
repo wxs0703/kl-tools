@@ -178,15 +178,16 @@ class FiberDataVector(DataVector):
             
         hdul.close()
 
-    def to_fits(self, file, overwrite=False):
+    def to_fits(self, file, overwrite=False, write_noise=True):
         ''' Write the data vector obj to a fits file
         '''
         hdu_list = [fits.PrimaryHDU(header=fits.Header(self.header))]
         for i in range(self.Nobs):
             hdu_list.append(fits.ImageHDU(self.data[i], 
             header=fits.Header(self.data_header[i])))
-            hdu_list.append(fits.ImageHDU(self.noise[i], 
-            header=fits.Header(self.data_header[i])))
+            if write_noise:
+                hdu_list.append(fits.ImageHDU(self.noise[i], 
+                header=fits.Header(self.data_header[i])))
         hdul = fits.HDUList(hdu_list)
         hdul.writeto(file, overwrite=overwrite)
 
