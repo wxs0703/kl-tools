@@ -270,7 +270,7 @@ def main():
     fiberlike = FiberLikelihood(pars, None, sampled_theta_fid=sampled_pars_value)
     datavector = get_GlobalDataVector(0)
     print(f'Dataset {d} #{ID} generated')
-    datavector.to_fits(os.path.join(FITS_DIR, f'gal_{ID}.fits'), overwrite=True)
+    datavector.to_fits(os.path.join(FITS_DIR, f'gal_{ID}.fits'), overwrite=True, write_noise=False)
     
     return 0
 

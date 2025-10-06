@@ -1542,11 +1542,11 @@ class FiberLikelihood(LogLikelihood):
             init_Cube_lists([cube.FiberModelCube(_mdim, c) for c in _conf])
             self._set_model_dimension()
             ### generate fiducial images and DataVector object
-            _d, _n = self.get_images(_fid, force_noise_free=False, return_noise=True)
+            _d = self.get_images(_fid, force_noise_free=False, return_noise=False)
             _header = {'NEXTEN': 2*self.Nobs, 'OBSNUM': self.Nobs}
             init_GlobalDataVector([FiberDataVector(
                  header=_header, data_header=_conf,
-                 data=_d, noise=_n)])
+                 data=_d)])
             # set the fiducial images to C++ routine
             print("FiberLikelihood: Caching the (fiducial) data vector...")
         ### Case 2: Build data vector from input FiberDataVector object
