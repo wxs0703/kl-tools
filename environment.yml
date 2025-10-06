@@ -1,0 +1,29 @@
+name: kl-nn
+channels:
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - mamba
+  - numpy=1.22
+  - astropy
+  - pytorch
+  - torchvision
+  - jupyter
+  - jupyterlab
+  - pudb
+  - galsim
+  - numba
+  - zeus-mcmc
+  - corner
+  - snakeviz
+  - emcee
+  - schwimmbad
+  - openmpi
+  - mpi4py
+  - fitsio
+  - ipdb
+  - scipy
+  - h5py
+  - pandas
+  - photutils
+prefix: /jet/home/xwang30/.conda/envs/kl-nn
