@@ -64,7 +64,7 @@ def main():
     # plt.close(fig)
     
     # Save parameter samples
-    df.to_csv(join(SAMPDIR, 'samples_small.csv'))
+    df.to_csv(join(SAMPDIR, 'samples_test_1m.csv'))
 
 
 if __name__ == '__main__':

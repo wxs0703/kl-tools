@@ -1,4 +1,4 @@
-import cube
+import kl_tools.cube as cube
 import numpy as np
 from astropy.io import fits
 from astropy.table import Table, join, hstack

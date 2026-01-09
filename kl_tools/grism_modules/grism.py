@@ -36,7 +36,7 @@ import kl_tools.utils as utils
 import kl_tools.parameters as parameters
 #from cube import CubePars
 import kl_tools.emission as emission
-#import kltools_grism_module_2 as m
+import kltools_grism_module_2 as m
 from kl_tools.datavector import DataVector
 
 # try:
